@@ -3,12 +3,17 @@
  */
 
 import {Component, Input, Output, ViewEncapsulation, provide} from '@angular/core';
-import {MnFullpageDirective, MnFullpageOptions, MnFullpageService} from "../../components";
+import {MnFullpageDirective, MnFullpageOptions, MnFullpageService} from '../../components';
+
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { DrummingComponent } from './drumming/drumming.component';
+
 
 @Component({
     selector: 'app',
     providers: [provide(MnFullpageService, {useClass: MnFullpageService})],
-    directives: [MnFullpageDirective],
+    directives: [MnFullpageDirective, NavbarComponent, HomeComponent, DrummingComponent],
     styles: [
         require('fullpage.js/jquery.fullPage.css'),
         require('./app.component.scss')
@@ -20,11 +25,11 @@ export class AppComponent {
 
     @Input() public options: MnFullpageOptions = new MnFullpageOptions({
         controlArrows: false,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 1500,
 
         menu: '#menu',
         css3: true,
-        anchors: ['menuAnchor1', 'menuAnchor2', 'menuAnchor3', 'menuAnchor4', 'menuAnchor5']
+        anchors: ['home', 'drumming', 'recording', 'media', 'contact']
     });
 
     @Output() private templates = {
@@ -38,7 +43,7 @@ export class AppComponent {
         service: require('raw!./templates/service.tempalte.txt')
     };
 
-    constructor(private fullpageService: MnFullpageService) {
+    constructor(/*private fullpageService: MnFullpageService*/) {
     }
 
 }

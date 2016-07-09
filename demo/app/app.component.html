@@ -1,12 +1,6 @@
 <!--suppress HtmlUnknownAnchorTarget, HtmlUnknownTarget -->
 
-<ul id="menu">
-    <li data-menuanchor="menuAnchor1" class="active"><a href="#menuAnchor1">First section</a></li>
-    <li data-menuanchor="menuAnchor2"><a href="#menuAnchor2">Second section</a></li>
-    <li data-menuanchor="menuAnchor3"><a href="#menuAnchor3">Third section</a></li>
-    <li data-menuanchor="menuAnchor4"><a href="#menuAnchor4">Fourth section</a></li>
-    <li data-menuanchor="menuAnchor5"><a href="#menuAnchor5">Fifth section</a></li>
-</ul>
+<navbar></navbar>
 
 <div [mnFullpage]="options"
      [mnFullpageNavigation]="true"
@@ -14,19 +8,22 @@
      [mnFullpageSlidesNavigation]="true"
      [mnFullpageSlidesNavPosition]="bottom">
 
-    <div class="section welcome-section fp-section fp-table">
-        <h1>Angular 2 fullPage.js</h1>
-        <h4>Create Beautiful Fullscreen Scrolling Websites (now with Angular 2)!</h4>
-        <img class="logo-image" src="https://raw.githubusercontent.com/meiblorn/ng2-fullpage/develop/logo.png"/>
-    </div>
+
+    <home class="section slides-section fp-section fp-table"></home>
+    <drumming class="section welcome-section fp-section fp-table"></drumming>
+
+    <!-- 3rd Section -->
     <div class="section install-section fp-section fp-table">
-        <h1>Easy to install !</h1>
+        <h1>Recording</h1>
         <div class="code-block">
             <pre>
                 <code class="bash">{{templates.install}}</code>
             </pre>
         </div>
     </div>
+    <!-- / 3rd Section -->
+
+    <!-- 4th Section -->
     <div class="section usage-section fp-section fp-table">
         <h1>Easy to use !</h1>
         <div class="code-block">
@@ -35,36 +32,9 @@
             </pre>
         </div>
     </div>
-    <div class="section slides-section fp-section fp-table">
-        <div class="slide">
-            <h1>Many ways to configure!</h1>
-            <h4>Use keyboard arrows or navigation below to slide right</h4>
-        </div>
-        <div class="slide">
-            <h1>Configure it via attributes</h1>
-            <div class="code-block">
-                <pre>
-                    <code class="html">{{templates.slides.attributes}}</code>
-                </pre>
-            </div>
-        </div>
-        <div class="slide">
-            <h1>Use configuration object instead</h1>
-            <div class="code-block">
-                <pre>
-                    <code class="javascript">{{templates.slides.classOptions}}</code>
-                </pre>
-            </div>
-        </div>
-        <div class="slide">
-            <h1>Or MIX IT !</h1>
-            <div class="code-block">
-                <pre>
-                    <code class="javascript">{{templates.slides.mix}}</code>
-                </pre>
-            </div>
-        </div>
-    </div>
+    <!-- / 4th Section -->
+
+    <!-- 5th Section -->
     <div class="section usage-section fp-section fp-table">
         <h1>Get full control on the page !</h1>
         <div class="code-block">
@@ -73,11 +43,5 @@
             </pre>
         </div>
     </div>
-    <div class="section start-use-it-now-section fp-section fp-table">
-        <h1>Start use it now!</h1>
-        <h4>
-            Return to <a href="https://github.com/meiblorn/ng2-fullpage">GitHub</a>
-            or start reading <a href="docs/index.html">docs</a>
-        </h4>
-    </div>
+    <!-- / 5th Section -->
 </div>
